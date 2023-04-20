@@ -9,13 +9,16 @@
 در اینجا ما اطلاعات را از client دریافت کرده ایم و 
 برای ارسال آن به mapper در 
 تابع handelRead کمی تغییر ایجاد کردیم 
+و متغییر val 
+داده های destinationHeader را دریافت میکند.
 تابع به صورت زیر است :
 
-[![image](https://www.linkpicture.com/q/handelReadMaster.png)](https://www.linkpicture.com/view.php?img=LPic64416fb3af33f1503756955)
+[![image](https://www.linkpicture.com/q/master-new_1.png)](https://www.linkpicture.com/view.php?img=LPic644196757bcc01342889040)
 
 در اینجا از تابع sentToMapper استفاده شده است که
 اطلاعاتی که از client گرفته را 
 به mapper ارسال میکند 
+ابن کار را با ساخت یک packet جدید انجام میدهیم .
 و تابع آن به شکل زیر پیاده سازی شده است :
 
 
@@ -39,7 +42,7 @@
 
 پس از آن mapper ها باید تشخیص بدهند که داده ای که
 از client بهش رسیده است متعلق به آن هست یا خیر 
-که تابع آن به این شکل است :
+
 
 
 
@@ -85,3 +88,22 @@
 
 
 [![image](https://www.linkpicture.com/q/object.png)](https://www.linkpicture.com/view.php?img=LPic64417fd2b4dd235763565)
+
+
+## بخش نتایج 
+
+در این بخش throughput را چاپ میکنیم که 
+نسبت تمام packet های دریافت شده توسط نودها به فاصله زمانی
+بیت دریافت اولین و اخرین packet است .
+علاوه بر آن حروف متناظر با اعدادی که به عنوان ورودی داده شده اند هم قابل مشاهده است .
+همچنین میتوانیم ببینیم که ip ادرس 
+نود ها نمایش داده شده است برای مثال میتوان دید که از ۱۰.۱.۳.۱ به ۱۰.۱.۳.۲ بسته ارسال شده است و بعد بسته بین مپر های متفاوت جا به جا میشود تا حرف الفبای موردنظر پیدا شود و سپس نتیجه را به کلاینت ارسال میکند . با دنبال کردن ip ها 
+میتوان جا به جا شدن بسته را دنبال کرد .
+
+
+
+[![image](https://www.linkpicture.com/q/res1_1.png)](https://www.linkpicture.com/view.php?img=LPic644195a0237931341679499)
+
+[![image](https://www.linkpicture.com/q/res2_1.png)](https://www.linkpicture.com/view.php?img=LPic644195a0237931341679499)
+
+[![image](https://www.linkpicture.com/q/Screenshot-1073.png)](https://www.linkpicture.com/view.php?img=LPic64419da432da8927960226)
